@@ -20,7 +20,8 @@ export class sharedService{
         }
     }
     currentUserData:any;
-    host='https://localhost:7032/';
+    // host='https://localhost:7032/';
+    host='https://smartlibapi.azurewebsites.net/';
     public login(loginData:loginVm):Observable<any>{
         let url=this.host+"api/User/login";
         return this.http.post(url,loginData);
