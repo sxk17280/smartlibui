@@ -55,5 +55,5 @@ jobs:
         with:
           app-name: 'smartlibui'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2B2FC48246804A91B898790F6EEA8D87 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9D0763B9FB6C4BF2ACB0716835445F03 }}
           package: .
