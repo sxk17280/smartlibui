@@ -21,9 +21,12 @@ steps:
     npm install
     ng build --configuration production
   displayName: 'npm install and build'
-
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/dist'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/angular-artifact'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'smart library ui'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/angular-artifact'
+    ArtifactName: 'angular-artifact'
     publishLocation: 'Container'
